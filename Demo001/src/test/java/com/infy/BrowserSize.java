@@ -21,10 +21,11 @@ public class BrowserSize {
 	}
   @Test
   public void browserSizeTest() throws Exception {
+	 driver.manage().window().maximize();
+//	  setting the dimensions of browser using the dimensions class
 	 Dimension d1=new Dimension(56778,123455);
 	 driver.manage().window().setSize(d1);
 	 Thread.sleep(200);
-	 driver.manage().window().maximize();
 	 
   }
 }

@@ -27,6 +27,7 @@ public class Scrollpage {
 	}
   @Test
   public void scrollWebPage() throws Exception {
+//	  finding the elements using xpath locator
 	  WebElement s=driver.findElement(By.xpath("/html/body/hr[1]"));
 	  Actions action=new Actions(driver);
 	  action.moveToElement(s);	  

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.infy.Popup">
+      <class name="com.infy2.GoogleAccountCreation">
         <methods>
+          <include name="test"/>
           <include name="setUp"/>
-          <include name="afterMethod"/>
-          <include name="popUpSwitchTest"/>
         </methods>
-      </class> <!-- com.infy.Popup -->
+      </class> <!-- com.infy2.GoogleAccountCreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
