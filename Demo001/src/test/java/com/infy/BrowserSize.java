@@ -12,8 +12,8 @@ public class BrowserSize {
 
 	@BeforeMethod
 	public void setUp() throws Exception{
-	//		set the key/values of set property according to the browser we are using 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	//	set the key/values of set property according to the browser we are using 
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 	//	create the instance
 		driver=new ChromeDriver(); 
 	//	get the page
@@ -23,7 +23,7 @@ public class BrowserSize {
   public void browserSizeTest() throws Exception {
 	 driver.manage().window().maximize();
 //	  setting the dimensions of browser using the dimensions class
-	 Dimension d1=new Dimension(56778,123455);
+	 Dimension d1=new Dimension(56778,12345);
 	 driver.manage().window().setSize(d1);
 	 Thread.sleep(200);
 	 

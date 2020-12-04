@@ -3,7 +3,6 @@ package com.infy;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +17,7 @@ public class Popup {
 	@BeforeMethod
 	public void setUp() throws Exception{
 	//	set the key/values of set property according to the browser we are using 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 	//	create the instance
 		driver=new ChromeDriver(); 
 	//	get the page
@@ -31,7 +30,6 @@ public class Popup {
 	@Test
 	public void popUpSwitchTest() {
 //		Getting the current url of the page and loading all the popups in the page
-		String Url=driver.getCurrentUrl();
 		String s=driver.getTitle();
 		driver.findElement(By.xpath("/html/body/table[2]/tbody/tr/td/font/b/a[1]")).click();
 		driver.findElement(By.xpath("/html/body/table[2]/tbody/tr/td/font/b/a[2]")).click();

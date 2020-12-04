@@ -1,6 +1,5 @@
 package com.infy;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,7 @@ public class DragDrop {
 	@BeforeMethod
 	public void setUp() throws Exception{
 	//	set the key/values of set property according to the browser we are using 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 	//	create the instance
 		driver=new ChromeDriver(); 
 	//	get the page

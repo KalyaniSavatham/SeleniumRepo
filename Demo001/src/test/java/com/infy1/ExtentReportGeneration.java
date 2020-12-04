@@ -10,11 +10,6 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-
-
-
-
-
 public class ExtentReportGeneration {
 	ExtentReports report;
 	ExtentTest test1;
@@ -28,7 +23,7 @@ public class ExtentReportGeneration {
 	  @Test
 	  public void extentReportTest() {
 //		  	set the key/values of set property according to the browser we are using 
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 //			create the instance
 		  	WebDriver driver=new ChromeDriver();
 //			get the page

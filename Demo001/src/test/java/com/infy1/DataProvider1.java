@@ -3,8 +3,8 @@ package com.infy1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -14,7 +14,7 @@ public class DataProvider1 {
 	  @BeforeClass
 	  public void setUp() {
 //		set the key/values of set property according to the browser we are using 
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 //		create the instance
 		driver=new ChromeDriver(); 
 //		get the page
@@ -22,9 +22,11 @@ public class DataProvider1 {
 //		maximize the window
 		driver.manage().window().maximize();
 	  }
-	
+	  
+//	  Creating the dataprovider with name login to automate inputs
 	  @DataProvider(name="login")
 	  public Object[][] dataProvider() {
+//		  creation of object which is an 2-dimensional array
 		  Object[][] data=new Object[3][2];
 		  
 		  data[0][0]="kalyanisavatham";
@@ -39,8 +41,14 @@ public class DataProvider1 {
 	
 	 @Test(dataProvider="login")
 	  public void dataTest(String username,String password) {
+//		 Finding the text input elements and sending the values which are received from dataprovider method
 		 driver.findElement(By.id("username")).sendKeys(username);
 		 driver.findElement(By.id("password")).sendKeys(password);
 		 driver.findElement(By.xpath("//*[@id=\"t3-content\"]/div[2]/div[1]/form/fieldset/div[4]/div/button")).click();
 	  }
+	 
+	 @AfterClass
+	 public void after() {
+		 driver.close();
+	 }
 }

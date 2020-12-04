@@ -1,7 +1,6 @@
 package com.infy;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -15,7 +14,7 @@ public class ReadProperties {
 	  @Test
 	  public void readPropertiesTest() throws IOException {
 //		 set the key/values of set property according to the browser we are using 
-		 System.setProperty("webdriver.chrome.driver","C:\\Users\\venkatalakshmikal.s\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	     System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 //		 Get the file using the file path of config.properties
 		 FileInputStream fin=new FileInputStream("C:\\Users\\venkatalakshmikal.s\\git\\SeleniumRepo\\Demo001\\Config.properties\\Config.Properties");
 //		 creating an instance of the properties class and loading the file to get the key,values in file
